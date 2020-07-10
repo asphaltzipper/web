@@ -7,7 +7,7 @@ odoo.define('web_search_with_and', function (require) {
     SearchView.include({
         // Override the base method to detect a 'shift' event
         select_completion: function (e, ui) {
-            if (e.shiftKey
+            if (!e.shiftKey
                 && ui.item.facet.values
                 && ui.item.facet.values.length
                 && String(ui.item.facet.values[0].value).trim() !== "") {
